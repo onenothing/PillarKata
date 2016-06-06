@@ -71,6 +71,6 @@ public class BabySitterTest {
     @Test
     public void testingThatWagesFrom5pmTo4amWith10pmBedtimeEqual$138() {
         wages = sitter.calculateWages(17, 4, 22);
-        assertEquals(138, wages);
+        assertEquals(140, wages);
     }
 }
