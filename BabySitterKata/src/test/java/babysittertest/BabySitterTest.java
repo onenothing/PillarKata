@@ -24,16 +24,16 @@ public class BabySitterTest {
     public BabySitterTest() {
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void throwAnExceptionIfStartTimeIsBefore5pm() {
+    @Test
+    public void throwAnExceptionIfStartTimeIsBefore5pm() throws Exception {
         BabySitter sitter = new BabySitter();
-        wages = sitter.calculateWages(18, 4, 20);
+        wages = sitter.calculateWages(15, 4, 20);
     }
     
     @Test
     public void throwAnExceptionIfEndTimeIsAfter4am() throws Exception{
         BabySitter sitter = new BabySitter();
-        wages = sitter.calculateWages(18, 5, 20);
+        wages = sitter.calculateWages(18, 3, 20);
     }
 
 }
