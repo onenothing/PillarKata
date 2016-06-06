@@ -14,28 +14,40 @@ import java.util.logging.Logger;
  */
 public class BabySitter {
 
-    public int calculateWages(int startTime, int endTime, int bedTime) throws Exception {
+    public int calculateWages(int startTime, int endTime, int bedTime) {
+
+        int eveningPay;
+        int bedTimePay;
+        int lateNightPay;
+        int midnight = 24;
 
         if (startTime < 17) {
-            throw new Exception("You may not start before 5pm.");
+            try {
+                throw new Exception("You may not start before 5pm.");
+            } catch (Exception ex) {
+                Logger.getLogger(BabySitter.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (endTime > 4) {
-            throw new Exception("The end time cannot go later than 4am.");
+            try {
+                throw new Exception("The end time cannot go later than 4am.");
+            } catch (Exception ex) {
+                Logger.getLogger(BabySitter.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         }
-        return startTime + endTime;
 
-    }
+        eveningPay = bedTime - startTime;
+        bedTimePay = midnight - bedTime;
 
-    public int eveningPay(int startTime, int endTime, int bedTime) {
-        return (endTime - startTime) * 12;
-    }
-    
-    public int bedTimePay(int startTime, int endTime, int bedTime) {
-        return (endTime - startTime) * 8;
-    }
-    
-    public int lateNightPay(int startTime, int endTime, int bedTime) {
-        return (endTime - startTime) * 16;
+        if (endTime > 1 && endTime <= 4) {
+            lateNightPay = endTime;
+
+        } else {
+            lateNightPay = 0;
+        }
+
+        return (eveningPay * 12) + (bedTimePay * 8) + (lateNightPay * 16);
+
     }
 }
