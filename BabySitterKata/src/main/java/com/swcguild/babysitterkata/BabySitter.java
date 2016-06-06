@@ -21,11 +21,15 @@ public class BabySitter {
         }
         if (endTime > 4) {
             throw new Exception("The end time cannot go later than 4am.");
+            
         }
         return startTime + endTime;
      
     }
     
+        public int eveningPay(int startTime, int endTime, int bedTime) {
+        return 0;
+    }
 }
 
 

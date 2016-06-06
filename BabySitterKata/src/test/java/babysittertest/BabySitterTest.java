@@ -19,21 +19,32 @@ import static org.junit.Assert.*;
  */
 public class BabySitterTest {
 
+    private BabySitter sitter;
     int wages;
+    int bedTime = 20;
 
     public BabySitterTest() {
     }
 
+    @Before
+    public void setUp() {
+        sitter = new BabySitter();
+    }
+
     @Test
     public void throwAnExceptionIfStartTimeIsBefore5pm() throws Exception {
-        BabySitter sitter = new BabySitter();
         wages = sitter.calculateWages(17, 4, 20);
     }
-    
+
     @Test
-    public void throwAnExceptionIfEndTimeIsAfter4am() throws Exception{
-        BabySitter sitter = new BabySitter();
+    public void throwAnExceptionIfEndTimeIsAfter4am() throws Exception {
         wages = sitter.calculateWages(18, 4, 20);
+    }
+
+    @Test
+    public void testingThatRatesAre12PerHourBeforeBedtime() {
+        assertEquals(12, sitter.eveningPay(18, 19, 20));
+
     }
 
 }
