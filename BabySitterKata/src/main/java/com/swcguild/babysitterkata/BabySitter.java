@@ -28,10 +28,14 @@ public class BabySitter {
     }
 
     public int eveningPay(int startTime, int endTime, int bedTime) {
-        return 12;
+        return (endTime - startTime) * 12;
     }
     
     public int bedTimePay(int startTime, int endTime, int bedTime) {
-        return 8;
+        return (endTime - startTime) * 8;
+    }
+    
+    public int lateNightPay(int startTime, int endTime, int bedTime) {
+        return (endTime - startTime) * 16;
     }
 }

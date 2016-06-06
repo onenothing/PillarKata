@@ -46,12 +46,18 @@ public class BabySitterTest {
         assertEquals(12, sitter.eveningPay(18, 19, 20));
         assertEquals(24, sitter.eveningPay(17, 19, 20));
     }
-    
+
     @Test
-        public void testingThatRatesAre8PerHourAterBedtimeAndBeforeMidnight() {
+    public void testingThatRatesAre8PerHourAterBedtimeAndBeforeMidnight() {
         assertEquals(8, sitter.bedTimePay(21, 22, 20));
         assertEquals(24, sitter.bedTimePay(21, 24, 20));
     }
-    
 
+    @Test
+    public void testingThatRatesAre16PerHourForWorkingAfterMidnight() {
+        //int payEarned = sitter.lateNightPay(21, 23, 20);
+        assertEquals(32, sitter.lateNightPay(25, 27, 24));
+        assertEquals(64, sitter.lateNightPay(24, 28, 24));
+
+    }
 }
