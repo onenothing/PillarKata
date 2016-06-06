@@ -6,10 +6,7 @@
 package babysittertest;
 
 import com.swcguild.babysitterkata.BabySitter;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -74,5 +71,6 @@ public class BabySitterTest {
     @Test
     public void testingThatWagesFrom5pmTo4amWith10pmBedtimeEqual$138() {
         wages = sitter.calculateWages(17, 4, 22);
+        assertEquals(138, wages);
     }
 }
