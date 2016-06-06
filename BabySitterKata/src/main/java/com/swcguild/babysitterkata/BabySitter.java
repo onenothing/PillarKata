@@ -15,21 +15,23 @@ import java.util.logging.Logger;
 public class BabySitter {
 
     public int calculateWages(int startTime, int endTime, int bedTime) throws Exception {
-        
+
         if (startTime < 17) {
             throw new Exception("You may not start before 5pm.");
         }
         if (endTime > 4) {
             throw new Exception("The end time cannot go later than 4am.");
-            
+
         }
         return startTime + endTime;
-     
+
+    }
+
+    public int eveningPay(int startTime, int endTime, int bedTime) {
+        return 12;
     }
     
-        public int eveningPay(int startTime, int endTime, int bedTime) {
-        return 0;
+    public int bedTimePay(int startTime, int endTime, int bedTime) {
+        return 8;
     }
 }
-
-

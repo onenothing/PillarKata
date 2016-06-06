@@ -44,7 +44,14 @@ public class BabySitterTest {
     @Test
     public void testingThatRatesAre12PerHourBeforeBedtime() {
         assertEquals(12, sitter.eveningPay(18, 19, 20));
-
+        assertEquals(24, sitter.eveningPay(17, 19, 20));
     }
+    
+    @Test
+        public void testingThatRatesAre8PerHourAterBedtimeAndBeforeMidnight() {
+        assertEquals(8, sitter.bedTimePay(21, 22, 20));
+        assertEquals(24, sitter.bedTimePay(21, 24, 20));
+    }
+    
 
 }
