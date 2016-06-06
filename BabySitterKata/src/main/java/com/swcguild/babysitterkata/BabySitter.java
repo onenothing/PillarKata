@@ -16,10 +16,10 @@ public class BabySitter {
 
     public int calculateWages(int startTime, int endTime, int bedTime) throws Exception {
         
-        if (startTime <= 17) {
+        if (startTime < 17) {
             throw new Exception("You may not start before 5pm.");
         }
-        if (endTime >= 4) {
+        if (endTime > 4) {
             throw new Exception("The end time cannot go later than 4am.");
         }
         return startTime + endTime;

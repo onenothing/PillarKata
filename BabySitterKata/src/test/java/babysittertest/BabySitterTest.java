@@ -27,13 +27,13 @@ public class BabySitterTest {
     @Test
     public void throwAnExceptionIfStartTimeIsBefore5pm() throws Exception {
         BabySitter sitter = new BabySitter();
-        wages = sitter.calculateWages(15, 4, 20);
+        wages = sitter.calculateWages(17, 4, 20);
     }
     
     @Test
     public void throwAnExceptionIfEndTimeIsAfter4am() throws Exception{
         BabySitter sitter = new BabySitter();
-        wages = sitter.calculateWages(18, 3, 20);
+        wages = sitter.calculateWages(18, 4, 20);
     }
 
 }
