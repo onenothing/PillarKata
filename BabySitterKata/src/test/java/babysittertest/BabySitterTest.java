@@ -18,16 +18,22 @@ import static org.junit.Assert.*;
  * @author freebagelbob
  */
 public class BabySitterTest {
-    
+
     int wages;
-    
+
     public BabySitterTest() {
     }
-  
-@Test (expected = IndexOutOfBoundsException.class)
-public void returnAnErrorIfStartTimeIsBefore5pm() {
-    BabySitter sitter = new BabySitter();
-    wages = sitter.calculateWages(18, 4, 20);
-}
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void throwAnExceptionIfStartTimeIsBefore5pm() {
+        BabySitter sitter = new BabySitter();
+        wages = sitter.calculateWages(18, 4, 20);
+    }
     
+    @Test
+    public void throwAnExceptionIfEndTimeIsAfter4am() throws Exception{
+        BabySitter sitter = new BabySitter();
+        wages = sitter.calculateWages(18, 5, 20);
+    }
+
 }
