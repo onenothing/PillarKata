@@ -43,20 +43,20 @@ public class BabySitterTest {
 
     @Test
     public void testingThatRatesAre12PerHourBeforeBedtime() {
-        assertEquals(12, sitter.calculateWages(18, 19, 20));
-        assertEquals(24, sitter.calculateWages(17, 19, bedTime));
+        assertEquals(12, sitter.rateEarnedAt12PerHour(18, 19, 20));
+        assertEquals(24, sitter.rateEarnedAt12PerHour(17, 19, bedTime));
     }
 
     @Test
     public void testingThatRatesAre8PerHourAterBedtimeAndBeforeMidnight() {
-        assertEquals(8, sitter.calculateWages(21, 22, 20));
-        assertEquals(24, sitter.calculateWages(21, 24, 20));
+        assertEquals(8, sitter.rateEarnedAt8PerHour(21, 22, 20));
+        assertEquals(24, sitter.rateEarnedAt8PerHour(21, 24, 20));
     }
 
     @Test
     public void testingThatRatesAre16PerHourForWorkingAfterMidnight() {
-        assertEquals(32, sitter.calculateWages(25, 27, 24));
-        assertEquals(64, sitter.calculateWages(24, 28, 24));
+        assertEquals(32, sitter.rateEarnedAt16PerHour(25, 27, 24));
+        assertEquals(64, sitter.rateEarnedAt16PerHour(24, 28, 24));
     }
     
     @Test

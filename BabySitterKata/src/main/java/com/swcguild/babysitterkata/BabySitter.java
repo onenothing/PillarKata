@@ -50,4 +50,19 @@ public class BabySitter {
         return (eveningPay * 12) + (bedTimePay * 8) + (lateNightPay * 16);
 
     }
+
+    public int rateEarnedAt12PerHour(int startTime, int endTime, int bedTime) {
+
+        return (endTime - startTime) * 12;
+    }
+
+    public int rateEarnedAt8PerHour(int startTime, int endTime, int bedTime) {
+        
+        return (endTime - startTime) * 8;
+    }
+
+    public int rateEarnedAt16PerHour(int startTime, int endTime, int bedTime) {
+        
+        return (endTime - startTime) * 16;
+    }
 }
