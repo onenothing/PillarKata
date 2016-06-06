@@ -70,4 +70,9 @@ public class BabySitterTest {
         wages = sitter.calculateWages(18, 24, bedTime);
         assertEquals(56, wages);
     }
+    
+    @Test
+    public void testingThatWagesFrom5pmTo4amWith10pmBedtimeEqual$138() {
+        wages = sitter.calculateWages(17, 4, 22);
+    }
 }
