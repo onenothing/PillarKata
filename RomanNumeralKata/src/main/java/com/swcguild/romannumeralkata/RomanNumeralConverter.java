@@ -12,7 +12,10 @@ package com.swcguild.romannumeralkata;
 public class RomanNumeralConverter {
 
     public static String convertToRomanNumeral(int raNum) {
-        if  (raNum == 2) {
+        if (raNum == 3) {
+            return "III";
+        }
+        else if  (raNum == 2) {
             return "II";
         }
         return "I";
