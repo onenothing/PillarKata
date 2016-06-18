@@ -34,9 +34,14 @@ public class RomanNumeralConverterTest {
         assertEquals("VI", RomanNumeralConverter.convertToRomanNumeral(6));
     }
     
+//    @Test
+//    public void convertArabicNineToRomanIX() {
+//        assertEquals("IX", RomanNumeralConverter.convertToRomanNumeral(9));
+//    }
+    
     @Test
-    public void convertArabicNineToRomanIX() {
-        assertEquals("IX", RomanNumeralConverter.convertToRomanNumeral(9));
+    public void convertArabicTenToRomanX() {
+        assertEquals("X", RomanNumeralConverter.convertToRomanNumeral(10));
     }
 
 }
