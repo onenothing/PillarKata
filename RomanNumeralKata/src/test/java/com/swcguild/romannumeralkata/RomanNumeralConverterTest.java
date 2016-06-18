@@ -48,5 +48,11 @@ public class RomanNumeralConverterTest {
     public void convertArabicTwentyToRomanXX() {
         assertEquals("XX", RomanNumeralConverter.convertToRomanNumeral(20));
     }
+    
+    @Test
+    public void convertArabicFiftyToRomanL() {
+        assertEquals("L", RomanNumeralConverter.convertToRomanNumeral(50));
+    }
+    
 
 }
