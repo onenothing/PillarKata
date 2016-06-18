@@ -18,18 +18,12 @@ public class RomanNumeralConverter {
             romanNum = "V";
             return "V";
         }
-
-        switch (raNum) {
-            case 3:
-                romanNum = "III";
-                break;
-            case 2:
-                romanNum = "II";
-                break;
-            default:
-                romanNum = "I";
-                break;
+        
+        for (int i = 0; i < raNum; i++) {
+            romanNum += "I";
+            
         }
+
         return romanNum;
     }
 }
