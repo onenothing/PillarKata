@@ -18,5 +18,10 @@ public class RomanNumeralConverterTest {
     public void convertArabicTwoToRomanII() {
         assertEquals("II", RomanNumeralConverter.convertToRomanNumeral(2));
     }
+    
+    @Test
+    public void convertArabicThreeToRomanIII() {
+        assertEquals("III", RomanNumeralConverter.convertToRomanNumeral(3));
+    }
 
 }
