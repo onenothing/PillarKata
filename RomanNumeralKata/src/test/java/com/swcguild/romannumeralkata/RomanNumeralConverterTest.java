@@ -77,5 +77,15 @@ public class RomanNumeralConverterTest {
         assertEquals("XC", RomanNumeralConverter.convertToRomanNumeral(90));
     }
     
+    @Test
+    public void convertArabicOneThousandToRomanM() {
+        assertEquals("M", RomanNumeralConverter.convertToRomanNumeral(1000));
+    }
+    
+    @Test
+    public void convertArabicNineHundredToRomanCM() {
+        assertEquals("CM", RomanNumeralConverter.convertToRomanNumeral(900));
+    }
+    
 
 }
