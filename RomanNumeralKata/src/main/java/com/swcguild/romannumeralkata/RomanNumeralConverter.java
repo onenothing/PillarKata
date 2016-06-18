@@ -12,12 +12,23 @@ package com.swcguild.romannumeralkata;
 public class RomanNumeralConverter {
 
     public static String convertToRomanNumeral(int raNum) {
-        if (raNum == 3) {
-            return "III";
+        String romanNum = "";
+        
+        if (raNum == 5) {
+            romanNum = "V";
         }
-        else if  (raNum == 2) {
-            return "II";
+
+        switch (raNum) {
+            case 3:
+                romanNum = "III";
+                break;
+            case 2:
+                romanNum = "II";
+                break;
+            default:
+                romanNum = "I";
+                break;
         }
-        return "I";
+        return romanNum;
     }
 }
