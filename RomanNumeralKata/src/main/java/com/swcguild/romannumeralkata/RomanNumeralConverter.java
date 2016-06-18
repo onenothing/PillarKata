@@ -13,6 +13,11 @@ public class RomanNumeralConverter {
 
     public static String convertToRomanNumeral(int raNum) {
         String romanNum = "";
+        
+        String[] romanValues = new String[] {"X", "V", "I"};
+        int[] arabicValues = new int[] {10, 5, 1};
+        
+        
 
         if (raNum == 10) {
             romanNum += "X";
