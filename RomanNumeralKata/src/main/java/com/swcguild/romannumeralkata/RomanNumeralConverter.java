@@ -18,7 +18,7 @@ public class RomanNumeralConverter {
         int[] arabicValues = new int[]{10, 5, 1};
 
         for (int i = 0; i < romanValues.length; i++) {
-            if (raNum == arabicValues[i]) {
+            while (raNum >= arabicValues[i]) {
                 romanNum += romanValues[i];
                 raNum -= arabicValues[i];
             }
