@@ -13,24 +13,15 @@ public class RomanNumeralConverter {
 
     public static String convertToRomanNumeral(int raNum) {
         String romanNum = "";
-        
-        String[] romanValues = new String[] {"X", "V", "I"};
-        int[] arabicValues = new int[] {10, 5, 1};
-        
-        
 
-        if (raNum == 10) {
-            romanNum += "X";
-            raNum -= 10;
+        String[] romanValues = new String[]{"X", "V", "I"};
+        int[] arabicValues = new int[]{10, 5, 1};
 
-        } else if (raNum >= 5) {
-            romanNum = "V";
-            raNum -= 5;
-        }
-
-        for (int i = 0; i < raNum; i++) {
-            romanNum += "I";
-
+        for (int i = 0; i < romanValues.length; i++) {
+            if (raNum == arabicValues[i]) {
+                romanNum += romanValues[i];
+                raNum -= arabicValues[i];
+            }
         }
 
         return romanNum;
