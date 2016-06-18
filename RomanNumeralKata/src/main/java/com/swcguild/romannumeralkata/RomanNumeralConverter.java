@@ -16,6 +16,7 @@ public class RomanNumeralConverter {
         
         if (raNum == 5) {
             romanNum = "V";
+            return "V";
         }
 
         switch (raNum) {
