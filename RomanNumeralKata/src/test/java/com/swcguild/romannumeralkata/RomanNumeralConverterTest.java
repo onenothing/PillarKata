@@ -66,5 +66,16 @@ public class RomanNumeralConverterTest {
     public void convertArabicFortyToRomanXL() {
         assertEquals("XL", RomanNumeralConverter.convertToRomanNumeral(40));
     }
+    
+    @Test
+    public void convertArabicOneHundredToRomanC() {
+        assertEquals("C", RomanNumeralConverter.convertToRomanNumeral(100));
+    }
+    
+    @Test
+    public void convertArabicNinetyToRomanXC() {
+        assertEquals("XC", RomanNumeralConverter.convertToRomanNumeral(90));
+    }
+    
 
 }
