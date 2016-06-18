@@ -87,5 +87,17 @@ public class RomanNumeralConverterTest {
         assertEquals("CM", RomanNumeralConverter.convertToRomanNumeral(900));
     }
     
+    @Test
+    public void convertArabicOneThousandSixtySixToRomanMLXVI() {
+        assertEquals("MLXVI", RomanNumeralConverter.convertToRomanNumeral(1066));
+    }
+    
+     @Test
+    public void convertArabicOneThousandNineHundredEightyNineToRomanMCMLXXXIX() {
+        assertEquals("MCMLXXXIX", RomanNumeralConverter.convertToRomanNumeral(1989));
+    }
+    
+    
+    
 
 }
