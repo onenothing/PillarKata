@@ -12,6 +12,6 @@ package com.swcguild.romannumeralkata;
 public class RomanNumeralConverter {
 
     public static String convertToRomanNumeral(int raNum) {
-        return null;
+        return "I";
     }
 }
