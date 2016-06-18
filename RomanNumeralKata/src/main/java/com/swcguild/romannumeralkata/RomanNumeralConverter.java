@@ -14,7 +14,11 @@ public class RomanNumeralConverter {
     public static String convertToRomanNumeral(int raNum) {
         String romanNum = "";
         
-        if (raNum >= 5) {
+        if (raNum == 9) {
+            return "IX";
+        }
+        
+        else if (raNum >= 5) {
             romanNum = "V";
             raNum -= 5;
         }
