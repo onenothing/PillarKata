@@ -23,5 +23,10 @@ public class RomanNumeralConverterTest {
     public void convertArabicThreeToRomanIII() {
         assertEquals("III", RomanNumeralConverter.convertToRomanNumeral(3));
     }
+    
+    @Test
+    public void convertArabicFiveToRomanV() {
+        assertEquals("V", RomanNumeralConverter.convertToRomanNumeral(5));
+    }
 
 }
