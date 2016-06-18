@@ -14,8 +14,8 @@ public class RomanNumeralConverter {
     public static String convertToRomanNumeral(int raNum) {
         String romanNum = "";
 
-        String[] romanValues = new String[]{"X", "V", "I"};
-        int[] arabicValues = new int[]{10, 5, 1};
+        String[] romanValues = new String[]{"X", "IX", "V", "I"};
+        int[] arabicValues = new int[]{10, 9, 5, 1};
 
         for (int i = 0; i < romanValues.length; i++) {
             while (raNum >= arabicValues[i]) {
