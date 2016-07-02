@@ -28,7 +28,10 @@ public class RomanNumeralConverter {
     }
     
     public static int convertToArabicNumber(String romanNum) {
-        if (romanNum == "II") {
+        if ("III".equals(romanNum)) {
+            
+        }
+        if ("II".equals(romanNum)) {
             return 2;
         }
         return 1;

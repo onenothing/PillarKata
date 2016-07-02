@@ -81,11 +81,13 @@ public class RomanNumeralConverterTest {
         assertEquals("MCMLXXXIX", RomanNumeralConverter.convertToRomanNumeral(1989));
 
     }
-    
-    @Test 
+
+    @Test
     public void convertRomanNumeralIToArabicNumber1() {
         assertEquals(1, RomanNumeralConverter.convertToArabicNumber("I"));
         assertEquals(2, RomanNumeralConverter.convertToArabicNumber("II"));
+        assertEquals(3, RomanNumeralConverter.convertToArabicNumber("III"));
+
     }
 
 }
