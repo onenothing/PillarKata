@@ -26,4 +26,8 @@ public class RomanNumeralConverter {
 
         return romanNum;
     }
+    
+    public static int convertToArabicNumber(String romanNum) {
+        return 1;
+    }
 }
