@@ -85,6 +85,7 @@ public class RomanNumeralConverterTest {
     @Test 
     public void convertRomanNumeralIToArabicNumber1() {
         assertEquals(1, RomanNumeralConverter.convertToArabicNumber("I"));
+        assertEquals(2, RomanNumeralConverter.convertToArabicNumber("II"));
     }
 
 }
