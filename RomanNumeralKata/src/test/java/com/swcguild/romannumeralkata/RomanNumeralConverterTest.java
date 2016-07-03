@@ -101,5 +101,10 @@ public class RomanNumeralConverterTest {
     public void convertRomanNumeralVToArabicNumber5() {
         assertEquals(5, RomanNumeralConverter.convertToArabicNumber("V"));
     }
+    
+    @Test
+    public void convertRomanNumeralVIToArabicNumber6() {
+        assertEquals(6, RomanNumeralConverter.convertToArabicNumber("VI"));
+    }
 
 }
