@@ -28,6 +28,14 @@ public class RomanNumeralConverter {
     }
     
     public static int convertToArabicNumber(String romanNum) {
+        
+        int arabicNum;
+        
+        if (romanNum.equals("V")) {
+            arabicNum = 5;
+            return 5;
+        }
+        
         if (romanNum.equals("III")) {
             return 3;
         }
