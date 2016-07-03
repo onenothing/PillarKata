@@ -26,22 +26,18 @@ public class RomanNumeralConverter {
 
         return romanNum;
     }
-    
+
     public static int convertToArabicNumber(String romanNum) {
-        
-        int arabicNum;
-        
+
+        int arabicNum =0;
+
         if (romanNum.equals("V")) {
             arabicNum = 5;
-            return 5;
         }
-        
-        if (romanNum.equals("III")) {
-            return 3;
+
+        for (int i = 0; i < romanNum.length(); i++) {
+            arabicNum += 1;
         }
-        else if (romanNum.equals("II")) {
-            return 2;
-        }
-        return 1;
+        return arabicNum;
     }
 }
