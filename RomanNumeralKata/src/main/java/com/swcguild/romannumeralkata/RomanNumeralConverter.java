@@ -33,6 +33,7 @@ public class RomanNumeralConverter {
 
         if (romanNum.equals("V")) {
             arabicNum = 5;
+            return 5;
         }
 
         for (int i = 0; i < romanNum.length(); i++) {
