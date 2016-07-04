@@ -31,16 +31,17 @@ public class RomanNumeralConverter {
 
         int arabicNum = 0;
 
-        for (int i = 0; i < romanNum.length(); i++) {
+        for (int i = 0; i < romanNum.length() -1; i--) {
             
-            if ((i < romanNum.length()-1)){
-            arabicNum -= romanNum.charAt('X');
-        }
-
-            if (romanNum.charAt(i) == 'X') {
-                arabicNum += 10;
-                
+            while (romanNum.charAt(i) == 'X') {
+                arabicValues[i] -= arabicNum;
+                romanNum = romanValues[i];
             }
+
+//            if (romanNum.charAt(i) == 'X') {
+//                arabicNum += 10;
+//                
+//            }
 
             if (romanNum.charAt(i) == 'V') {
                 arabicNum += 5;
