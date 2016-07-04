@@ -132,4 +132,9 @@ public class RomanNumeralConverterTest {
         assertEquals(50, rnConverter.convertToArabicNumber("L"));
     }
     
+    @Test
+    public void convertRomanNumXLToArabicNumbe40() {
+        assertEquals(40, rnConverter.convertToArabicNumber("XL"));
+    }
+    
 }
