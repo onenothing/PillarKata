@@ -11,11 +11,11 @@ package com.swcguild.romannumeralkata;
  */
 public class RomanNumeralConverter {
 
-    public static String convertToRomanNumeral(int raNum) {
-        String romanNum = "";
+    private final String[] romanValues = new String[]{"M", "CM", "C", "XC", "L", "XL", "X", "IX", "V", "I"};
+    private final int[] arabicValues = new int[]{1000, 900, 100, 90, 50, 40, 10, 9, 5, 1};
 
-        String[] romanValues = new String[]{"M", "CM", "C", "XC", "L", "XL", "X", "IX", "V", "I"};
-        int[] arabicValues = new int[]{1000, 900, 100, 90, 50, 40, 10, 9, 5, 1};
+    public String convertToRomanNumeral(int raNum) {
+        String romanNum = "";
 
         for (int i = 0; i < romanValues.length; i++) {
             while (raNum >= arabicValues[i]) {
@@ -27,24 +27,29 @@ public class RomanNumeralConverter {
         return romanNum;
     }
 
-    public static int convertToArabicNumber(String romanNum) {
+    public  int convertToArabicNumber(String romanNum) {
 
         int arabicNum = 0;
 
         for (int i = 0; i < romanNum.length(); i++) {
             
+            if ((i < romanNum.length()-1)){
+            arabicNum -= romanNum.charAt('X');
+        }
+
             if (romanNum.charAt(i) == 'X') {
                 arabicNum += 10;
+                
             }
-            
+
             if (romanNum.charAt(i) == 'V') {
                 arabicNum += 5;
-                
-            } 
+
+            }
             if (romanNum.charAt(i) == 'I') {
                 arabicNum += 1;
             }
-            
+
         }
         return arabicNum;
     }

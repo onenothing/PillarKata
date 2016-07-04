@@ -2,117 +2,129 @@ package com.swcguild.romannumeralkata;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
  * @author freebagelbob
  */
 public class RomanNumeralConverterTest {
-
+    
+    private RomanNumeralConverter rnConverter;
+    
+    @Before
+            public void setUp() {
+    rnConverter = new RomanNumeralConverter();
+}
     @Test
     public void convertArabicTwoToRomanII() {
-        assertEquals("II", RomanNumeralConverter.convertToRomanNumeral(2));
+        assertEquals("II", rnConverter.convertToRomanNumeral(2));
     }
 
     @Test
     public void convertArabicFiveToRomanV() {
-        assertEquals("V", RomanNumeralConverter.convertToRomanNumeral(5));
+        assertEquals("V", rnConverter.convertToRomanNumeral(5));
     }
 
     @Test
     public void convertArabicSixToRomanVI() {
-        assertEquals("VI", RomanNumeralConverter.convertToRomanNumeral(6));
+        assertEquals("VI", rnConverter.convertToRomanNumeral(6));
     }
 
     @Test
     public void convertArabicTenToRomanX() {
-        assertEquals("X", RomanNumeralConverter.convertToRomanNumeral(10));
+        assertEquals("X", rnConverter.convertToRomanNumeral(10));
     }
 
     @Test
     public void convertArabicTwentyToRomanXX() {
-        assertEquals("XX", RomanNumeralConverter.convertToRomanNumeral(20));
+        assertEquals("XX", rnConverter.convertToRomanNumeral(20));
     }
 
     @Test
     public void convertArabicFiftyToRomanL() {
-        assertEquals("L", RomanNumeralConverter.convertToRomanNumeral(50));
+        assertEquals("L", rnConverter.convertToRomanNumeral(50));
     }
 
     @Test
     public void convertArabicNumberToRomanNumeralWithValuesWeHaveSoFar() {
-        assertEquals("LXXX", RomanNumeralConverter.convertToRomanNumeral(80));
-        assertEquals("XXVI", RomanNumeralConverter.convertToRomanNumeral(26));
-        assertEquals("XLI", RomanNumeralConverter.convertToRomanNumeral(41));
+        assertEquals("LXXX", rnConverter.convertToRomanNumeral(80));
+        assertEquals("XXVI", rnConverter.convertToRomanNumeral(26));
+        assertEquals("XLI", rnConverter.convertToRomanNumeral(41));
 
     }
 
     @Test
     public void convertArabicFortyToRomanXL() {
-        assertEquals("XL", RomanNumeralConverter.convertToRomanNumeral(40));
+        assertEquals("XL", rnConverter.convertToRomanNumeral(40));
     }
 
     @Test
     public void convertArabicOneHundredToRomanC() {
-        assertEquals("C", RomanNumeralConverter.convertToRomanNumeral(100));
+        assertEquals("C", rnConverter.convertToRomanNumeral(100));
     }
 
     @Test
     public void convertArabicNinetyToRomanXC() {
-        assertEquals("XC", RomanNumeralConverter.convertToRomanNumeral(90));
+        assertEquals("XC", rnConverter.convertToRomanNumeral(90));
     }
 
     @Test
     public void convertArabicOneThousandToRomanM() {
-        assertEquals("M", RomanNumeralConverter.convertToRomanNumeral(1000));
+        assertEquals("M", rnConverter.convertToRomanNumeral(1000));
     }
 
     @Test
     public void convertArabicNineHundredToRomanCM() {
-        assertEquals("CM", RomanNumeralConverter.convertToRomanNumeral(900));
+        assertEquals("CM", rnConverter.convertToRomanNumeral(900));
     }
 
     @Test
     public void convertArabicNumberToRomanNumeralTestCases() {
-        assertEquals("I", RomanNumeralConverter.convertToRomanNumeral(1));
-        assertEquals("III", RomanNumeralConverter.convertToRomanNumeral(3));
-        assertEquals("IX", RomanNumeralConverter.convertToRomanNumeral(9));
-        assertEquals("MLXVI", RomanNumeralConverter.convertToRomanNumeral(1066));
-        assertEquals("MCMLXXXIX", RomanNumeralConverter.convertToRomanNumeral(1989));
+        assertEquals("I", rnConverter.convertToRomanNumeral(1));
+        assertEquals("III", rnConverter.convertToRomanNumeral(3));
+        assertEquals("IX", rnConverter.convertToRomanNumeral(9));
+        assertEquals("MLXVI", rnConverter.convertToRomanNumeral(1066));
+        assertEquals("MCMLXXXIX", rnConverter.convertToRomanNumeral(1989));
 
     }
 
     @Test
     public void convertRomanNumIToArabicNumber1() {
-        assertEquals(1, RomanNumeralConverter.convertToArabicNumber("I"));
+        assertEquals(1, rnConverter.convertToArabicNumber("I"));
     }
 
     @Test
     public void convertRomanNumIIToArabicNumber2() {
-        assertEquals(2, RomanNumeralConverter.convertToArabicNumber("II"));
+        assertEquals(2, rnConverter.convertToArabicNumber("II"));
     }
 
     @Test
     public void convertRomanNumIIIToArabicNumber3() {
-        assertEquals(3, RomanNumeralConverter.convertToArabicNumber("III"));
+        assertEquals(3, rnConverter.convertToArabicNumber("III"));
     }
 
     @Test
     public void convertRomanNumVToArabicNumber5() {
-        assertEquals(5, RomanNumeralConverter.convertToArabicNumber("V"));
+        assertEquals(5, rnConverter.convertToArabicNumber("V"));
     }
 
     @Test
     public void convertRomanNumeralsToArabicNumbers() {
-        assertEquals(6, RomanNumeralConverter.convertToArabicNumber("VI"));
-        assertEquals(7, RomanNumeralConverter.convertToArabicNumber("VII"));
-        assertEquals(8, RomanNumeralConverter.convertToArabicNumber("VIII"));
+        assertEquals(6, rnConverter.convertToArabicNumber("VI"));
+        assertEquals(7, rnConverter.convertToArabicNumber("VII"));
+        assertEquals(8, rnConverter.convertToArabicNumber("VIII"));
 
     }
     
     @Test
     public void convertRomanNumXToArabicNumber10() {
-        assertEquals(10, RomanNumeralConverter.convertToArabicNumber("X"));
+        assertEquals(10, rnConverter.convertToArabicNumber("X"));
     }
-
+    
+    @Test
+    public void convertRomanNumIXToArabicNumber9() {
+        assertEquals(9, rnConverter.convertToArabicNumber("IX"));
+    }
+    
 }
