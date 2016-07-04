@@ -31,7 +31,7 @@ public class RomanNumeralConverter {
 
         int arabicNum = 0;
 
-        for (int i = 0; i < romanNum.length(); i++) {
+        for (int i = 0; i < romanValues.length; i++) {
             
             while (romanNum.startsWith(romanValues[i])) {
                 arabicNum += arabicValues[i];
