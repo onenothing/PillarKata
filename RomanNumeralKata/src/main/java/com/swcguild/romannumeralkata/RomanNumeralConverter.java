@@ -31,11 +31,11 @@ public class RomanNumeralConverter {
 
         int arabicNum = 0;
 
-        for (int i = 0; i < romanNum.length() -1; i--) {
+        for (int i = 0; i < romanNum.length(); i++) {
             
-            while (romanNum.charAt(i) == 'X') {
-                arabicValues[i] -= arabicNum;
-                romanNum = romanValues[i];
+            while (romanNum.startsWith(romanValues[i])) {
+                arabicNum += arabicValues[i];
+                romanNum = romanNum.substring(romanValues[i].length());
             }
 
 //            if (romanNum.charAt(i) == 'X') {
@@ -43,13 +43,13 @@ public class RomanNumeralConverter {
 //                
 //            }
 
-            if (romanNum.charAt(i) == 'V') {
-                arabicNum += 5;
-
-            }
-            if (romanNum.charAt(i) == 'I') {
-                arabicNum += 1;
-            }
+//            if (romanNum.charAt(i) == 'V') {
+//                arabicNum += 5;
+//
+//            }
+//            if (romanNum.charAt(i) == 'I') {
+//                arabicNum += 1;
+//            }
 
         }
         return arabicNum;
