@@ -32,7 +32,11 @@ public class RomanNumeralConverter {
         int arabicNum = 0;
 
         for (int i = 0; i < romanNum.length(); i++) {
-
+            
+            if (romanNum.charAt(i) == 'X') {
+                arabicNum += 10;
+            }
+            
             if (romanNum.charAt(i) == 'V') {
                 arabicNum += 5;
                 

@@ -109,5 +109,10 @@ public class RomanNumeralConverterTest {
         assertEquals(8, RomanNumeralConverter.convertToArabicNumber("VIII"));
 
     }
+    
+    @Test
+    public void convertRomanNumXToArabicNumber10() {
+        assertEquals(10, RomanNumeralConverter.convertToArabicNumber("X"));
+    }
 
 }
