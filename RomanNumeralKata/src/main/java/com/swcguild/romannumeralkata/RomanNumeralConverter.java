@@ -38,20 +38,9 @@ public class RomanNumeralConverter {
                 romanNum = romanNum.substring(romanValues[i].length());
             }
 
-//            if (romanNum.charAt(i) == 'X') {
-//                arabicNum += 10;
-//                
-//            }
-
-//            if (romanNum.charAt(i) == 'V') {
-//                arabicNum += 5;
-//
-//            }
-//            if (romanNum.charAt(i) == 'I') {
-//                arabicNum += 1;
-//            }
-
         }
+        
         return arabicNum;
+        
     }
 }
