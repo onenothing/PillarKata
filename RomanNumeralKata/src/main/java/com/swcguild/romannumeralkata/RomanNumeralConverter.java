@@ -30,18 +30,17 @@ public class RomanNumeralConverter {
     public static int convertToArabicNumber(String romanNum) {
 
         int arabicNum = 0;
-        String romanNumeral = romanNum;
 
-        if (romanNum.equals("V")) {
-            arabicNum = 5;
-            return 5;
-        }
-        else if (romanNum.equals("VI")) {
-            return 6;
-        }
-        
         for (int i = 0; i < romanNum.length(); i++) {
-            arabicNum += 1;
+
+            if (romanNum.charAt(i) == 'V') {
+                arabicNum += 5;
+                
+            } 
+            if (romanNum.charAt(i) == 'I') {
+                arabicNum += 1;
+            }
+            
         }
         return arabicNum;
     }
