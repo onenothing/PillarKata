@@ -83,27 +83,27 @@ public class RomanNumeralConverterTest {
     }
 
     @Test
-    public void convertRomanNumeralIToArabicNumber1() {
+    public void convertRomanNumIToArabicNumber1() {
         assertEquals(1, RomanNumeralConverter.convertToArabicNumber("I"));
     }
 
     @Test
-    public void convertRomanNumeralIIToArabicNumber2() {
+    public void convertRomanNumIIToArabicNumber2() {
         assertEquals(2, RomanNumeralConverter.convertToArabicNumber("II"));
     }
     
     @Test
-    public void convertRomanNumeralIIIToArabicNumber3() {
+    public void convertRomanNumIIIToArabicNumber3() {
         assertEquals(3, RomanNumeralConverter.convertToArabicNumber("III"));
     }
     
     @Test
-    public void convertRomanNumeralVToArabicNumber5() {
+    public void convertRomanNumVToArabicNumber5() {
         assertEquals(5, RomanNumeralConverter.convertToArabicNumber("V"));
     }
     
     @Test
-    public void convertRomanNumeralVIToArabicNumber6() {
+    public void convertRomanNumVIToArabicNumber6() {
         assertEquals(6, RomanNumeralConverter.convertToArabicNumber("VI"));
     }
 
