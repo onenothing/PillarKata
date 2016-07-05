@@ -162,6 +162,11 @@ public class RomanNumeralConverterTest {
     }
     
     @Test
+    public void convertRomanNumDVIIToArabicNumber507() {
+        assertEquals(507, rnConverter.convertToArabicNumber("DVII"));
+    }
+    
+    @Test
     public void convertRomanNumeralsToArabicNumbersTestCases() {
         assertEquals(1, rnConverter.convertToArabicNumber("I"));
         assertEquals(3, rnConverter.convertToArabicNumber("III"));
