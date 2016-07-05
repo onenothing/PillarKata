@@ -99,6 +99,12 @@ public class RomanNumeralConverterTest {
 
     }
     
+    @Test
+    public void convertArabicToRomanExceptionTest() {
+        thrown.expect(IllegalArgumentException.class);
+       rnConverter.convertToRomanNumeral(5);
+    }
+    
      /********************************************
      * Tests for Roman Numeral to Arabic Number
      *********************************************/
