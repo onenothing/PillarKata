@@ -99,10 +99,20 @@ public class RomanNumeralConverterTest {
 
     }
     
+    /********************************************
+     * Exception tests for illegal input
+     *********************************************/
+    
     @Test
-    public void convertArabicToRomanExceptionTest() {
+    public void convertArabicToRomanExceptionTestNegative() {
         thrown.expect(IllegalArgumentException.class);
-       rnConverter.convertToRomanNumeral(5);
+       rnConverter.convertToRomanNumeral(-9);
+    }
+    
+    @Test
+    public void convertArabicToRomanExceptionTestExceedsLimit() {
+        thrown.expect(IllegalArgumentException.class);
+       rnConverter.convertToRomanNumeral(5001);
     }
     
      /********************************************
