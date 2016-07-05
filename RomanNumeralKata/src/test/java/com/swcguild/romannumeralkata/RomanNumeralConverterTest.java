@@ -9,13 +9,14 @@ import org.junit.Before;
  * @author freebagelbob
  */
 public class RomanNumeralConverterTest {
-    
+
     private RomanNumeralConverter rnConverter;
-    
+
     @Before
-            public void setUp() {
-    rnConverter = new RomanNumeralConverter();
-}
+    public void setUp() {
+        rnConverter = new RomanNumeralConverter();
+    }
+
     @Test
     public void convertArabicTwoToRomanII() {
         assertEquals("II", rnConverter.convertToRomanNumeral(2));
@@ -116,25 +117,35 @@ public class RomanNumeralConverterTest {
         assertEquals(8, rnConverter.convertToArabicNumber("VIII"));
 
     }
-    
+
     @Test
     public void convertRomanNumXToArabicNumber10() {
         assertEquals(10, rnConverter.convertToArabicNumber("X"));
     }
-    
+
     @Test
     public void convertRomanNumIXToArabicNumber9() {
         assertEquals(9, rnConverter.convertToArabicNumber("IX"));
     }
-    
+
     @Test
-    public void convertRomanNumLToArabicNumbe50() {
+    public void convertRomanNumLToArabicNumber50() {
         assertEquals(50, rnConverter.convertToArabicNumber("L"));
     }
-    
+
     @Test
-    public void convertRomanNumXLToArabicNumbe40() {
+    public void convertRomanNumXLToArabicNumber40() {
         assertEquals(40, rnConverter.convertToArabicNumber("XL"));
     }
-    
+
+    @Test
+    public void convertRomanNumeralsToArabicNumbersTestCases() {
+        assertEquals(1, rnConverter.convertToArabicNumber("I"));
+        assertEquals(3, rnConverter.convertToArabicNumber("III"));
+        assertEquals(9, rnConverter.convertToArabicNumber("IX"));
+        assertEquals(1066, rnConverter.convertToArabicNumber("MLXVI"));
+        assertEquals(1989, rnConverter.convertToArabicNumber("MCMLXXXIX"));
+
+    }
+
 }
