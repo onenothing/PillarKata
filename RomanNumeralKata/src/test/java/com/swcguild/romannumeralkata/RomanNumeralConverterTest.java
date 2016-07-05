@@ -3,6 +3,8 @@ package com.swcguild.romannumeralkata;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.ExpectedException;
 
 /**
  *
@@ -11,11 +13,18 @@ import org.junit.Before;
 public class RomanNumeralConverterTest {
 
     private RomanNumeralConverter rnConverter;
-
+    
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+    
     @Before
     public void setUp() {
         rnConverter = new RomanNumeralConverter();
     }
+    
+     /********************************************
+     * Tests for Arabic Number to Roman Numeral
+     *********************************************/
 
     @Test
     public void convertArabicTwoToRomanII() {
@@ -89,6 +98,10 @@ public class RomanNumeralConverterTest {
         assertEquals("MCMLXXXIX", rnConverter.convertToRomanNumeral(1989));
 
     }
+    
+     /********************************************
+     * Tests for Roman Numeral to Arabic Number
+     *********************************************/
 
     @Test
     public void convertRomanNumIToArabicNumber1() {
@@ -137,7 +150,17 @@ public class RomanNumeralConverterTest {
     public void convertRomanNumXLToArabicNumber40() {
         assertEquals(40, rnConverter.convertToArabicNumber("XL"));
     }
-
+    
+    @Test
+    public void convertRomanNumCXXIToArabicNumber121() {
+        assertEquals(121, rnConverter.convertToArabicNumber("CXXI"));
+    }
+    
+    @Test
+    public void convertRomanNumCCCLXXVToArabicNumber375() {
+        assertEquals(375, rnConverter.convertToArabicNumber("CCCLXXV"));
+    }
+    
     @Test
     public void convertRomanNumeralsToArabicNumbersTestCases() {
         assertEquals(1, rnConverter.convertToArabicNumber("I"));
