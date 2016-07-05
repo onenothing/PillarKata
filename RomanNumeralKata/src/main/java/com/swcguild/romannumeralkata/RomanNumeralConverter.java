@@ -11,8 +11,8 @@ package com.swcguild.romannumeralkata;
  */
 public class RomanNumeralConverter {
 
-    private final String[] romanValues = new String[]{"M", "CM", "C", "XC", "L", "XL", "X", "IX", "V", "I"};
-    private final int[] arabicValues = new int[]{1000, 900, 100, 90, 50, 40, 10, 9, 5, 1};
+    private final String[] romanValues = new String[]{"M", "CM", "D", "C", "XC", "L", "XL", "X", "IX", "V", "I"};
+    private final int[] arabicValues = new int[]{1000, 900, 500, 100, 90, 50, 40, 10, 9, 5, 1};
 
     public String convertToRomanNumeral(int arabicNumber) {
 
