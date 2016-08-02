@@ -23,6 +23,7 @@ public class RomanNumberKata {
 
         map.put(1, "I");
         map.put(10, "X");
+        map.put(40, "XL");
         map.put(50, "L");
         map.put(100, "C");
         map.put(500, "D");

@@ -36,5 +36,10 @@ public class RomanNumberKataTest {
     public void whenPassedArabicNumberTwentyReturnRomanNumeralXX() {
         assertEquals("XX", roman.convert(20));
     }
+    
+    @Test
+    public void whenPassedArabicNumberFortyReturnRomanNumeralXL() {
+        assertEquals("XL", roman.convert(40));
+    }
   
 }
