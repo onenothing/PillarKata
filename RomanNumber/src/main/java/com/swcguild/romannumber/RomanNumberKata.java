@@ -41,7 +41,7 @@ public class RomanNumberKata {
         
         StringBuilder result = new StringBuilder();
         
-        if (num == 0) {
+        if (num <= 0 || num >=4000) {
             throw new IllegalArgumentException("Not a valid roman numeral, please try again, thanks.");
         }
 
