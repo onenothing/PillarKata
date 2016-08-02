@@ -28,8 +28,13 @@ public class RomanNumberKataTest {
     }
     
     @Test
-    public void whenPassedArabicNumberTenReturnRomanNumeral() {
+    public void whenPassedArabicNumberTenReturnRomanNumeralX() {
         assertEquals("X", roman.convert(10));
+    }
+    
+    @Test
+    public void whenPassedArabicNumberTwentyReturnRomanNumeralXX() {
+        assertEquals("XX", roman.convert(20));
     }
   
 }
