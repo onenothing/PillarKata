@@ -18,7 +18,7 @@ public class RomanNumberKata {
     private Map<Integer, String> map;
 
     public RomanNumberKata() {
-        
+
         map = new TreeMap<>(Collections.reverseOrder());
 
         map.put(1, "I");
@@ -38,10 +38,10 @@ public class RomanNumberKata {
     }
 
     public String convert(int num) {
-        
+
         StringBuilder result = new StringBuilder();
-        
-        if (num <= 0 || num >=4000) {
+
+        if (num <= 0 || num >= 4000) {
             throw new IllegalArgumentException("Not a valid roman numeral, please try again, thanks.");
         }
 
@@ -56,5 +56,12 @@ public class RomanNumberKata {
         return result.toString();
 
     }
+    
+    public int newConvert(String numeral) {
+        return 1;
+    }
+    
+    
 
 }
+

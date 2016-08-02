@@ -23,6 +23,28 @@ public class RomanNumberKataTest {
     }
 
     @Test
+    public void whenPassedAZeroAnExceptionIsThrown() {
+        try {
+            roman.convert(0);
+            fail("Argument out of range exception is not handled.");
+        } catch (IllegalArgumentException e) {
+
+        }
+
+    }
+
+    @Test
+    public void whenPassedANumberGreaterThan3999AnExceptionIsThrown() {
+        try {
+            roman.convert(4000);
+            fail("Argument out of range exception is not handled.");
+        } catch (IllegalArgumentException e) {
+
+        }
+
+    }
+
+    @Test
     public void whenPassedArabicNumberOneReturnRomanNumeralI() {
         assertEquals("I", roman.convert(1));
     }
@@ -46,27 +68,13 @@ public class RomanNumberKataTest {
     public void whenPassedArabicNumberFourHundredNinetySixReturnRomanNumeralCDXCVI() {
         assertEquals("CDXCVI", roman.convert(496));
     }
-
-    @Test
-    public void whenPassedAZeroAnExceptionIsThrown() {
-        try {
-            roman.convert(0);
-            fail("Argument out of range exception is not handled.");
-        } catch (IllegalArgumentException e) {
-
-        }
-
-    }
+    
+    
+//   ************************** Roman To Arabic**************************
     
     @Test
-    public void whenPassedANumberGreaterThan3999AnExceptionIsThrown() {
-        try {
-            roman.convert(4000);
-            fail("Argument out of range exception is not handled.");
-        } catch (IllegalArgumentException e) {
-
-        }
-
+    public void whenPassedRomanNumeralIReturnArabicNumber1() {
+        assertEquals(1, roman.newConvert("I"));
     }
 
 }
