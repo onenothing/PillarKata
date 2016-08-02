@@ -5,20 +5,29 @@
  */
 package com.swcguild.romannumber;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  *
  * @author freebagelbob
  */
 public class RomanNumberKata {
+    
+    private Map<String, Integer> map;
 
     public String convert(int num) {
         
-        if (num == 1) {
-
-        } else if (num == 10 ) {
-            return "X";
-        }
-        return "I";
+        map = new TreeMap<>();
+        
+        map.put("I", 1);
+        map.put("X", 10);
+        map.put("L", 50);
+        map.put("C", 100);
+        map.put("D", 500);
+        map.put("M", 1000);
+        
+        return map.toString();
 
     }
 
