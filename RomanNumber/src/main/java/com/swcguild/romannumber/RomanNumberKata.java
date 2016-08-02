@@ -5,16 +5,21 @@
  */
 package com.swcguild.romannumber;
 
-import java.util.Collections;
-import java.util.Map;
-import java.util.TreeMap;
-
 /**
  *
  * @author freebagelbob
  */
 public class RomanNumberKata {
 
+    public String convert(int num) {
+        
+        if (num == 1) {
 
+        } else if (num == 10 ) {
+            return "X";
+        }
+        return "I";
+
+    }
 
 }

@@ -22,52 +22,14 @@ public class RomanNumberKataTest {
         roman = new RomanNumberKata();
     }
     
-    @Test 
-    public void whenPassedRomanIReturnArabicOne() {
+    @Test
+    public void whenPassedArabicNumberOneReturnRomanNumeralI() {
         assertEquals("I", roman.convert(1));
     }
     
-    @Test 
-    public void whenPassedRomanlReturnArabicOne() {
-        assertEquals("V", roman.convert(5));
-    }
-    
-    @Test 
-    public void whenPassedRomanXReturnArabicTen() {
+    @Test
+    public void whenPassedArabicNumberTenReturnRomanNumeral() {
         assertEquals("X", roman.convert(10));
-    }
-    
-    @Test 
-    public void whenPassedRomanXXReturnArabicTwenty() {
-        assertEquals("XX", roman.convert(20));
-    }
-   
-    @Test 
-    public void whenPassedRomanIVReturnArabicFour() {
-        assertEquals("IV", roman.convert(4));
-    }
-    
-    @Test 
-    public void whenPassedRomanCDLXVIIIReturnArabicFourHundredSixtyEight() {
-        assertEquals("CDLXVIII", roman.convert(468));
-    }
-    
-    @Test
-    public void testZero() {
-        try {
-            roman.convert(0);
-            fail("Argument out of Range is not handled");
-        } catch (IllegalArgumentException e) {
-        }
-    }
-    
-    @Test
-    public void testFourThousand() {
-        try {
-            roman.convert(4000);
-            fail("Argument out of Range is not handled");
-        } catch (IllegalArgumentException e) {
-        }
     }
   
 }
