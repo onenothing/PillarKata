@@ -40,6 +40,10 @@ public class RomanNumberKata {
     public String convert(int num) {
         
         StringBuilder result = new StringBuilder();
+        
+        if (num == 0) {
+            throw new IllegalArgumentException("Not a valid roman numeral, please try again, thanks.");
+        }
 
         for (Integer key : map.keySet()) {
             while (num >= key) {
