@@ -14,20 +14,20 @@ import java.util.TreeMap;
  */
 public class RomanNumberKata {
     
-    private Map<String, Integer> map;
+    private Map<Integer, String> map;
 
     public String convert(int num) {
         
         map = new TreeMap<>();
         
-        map.put("I", 1);
-        map.put("X", 10);
-        map.put("L", 50);
-        map.put("C", 100);
-        map.put("D", 500);
-        map.put("M", 1000);
+        map.put(1, "I");
+        map.put(10, "X");
+        map.put(50, "L");
+        map.put(100, "C");
+        map.put(500, "D");
+        map.put(1000, "M");
         
-        return map.toString();
+        return map.get(num);
 
     }
 
