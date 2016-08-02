@@ -5,6 +5,7 @@
  */
 package com.swcguild.romannumber;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -18,7 +19,7 @@ public class RomanNumberKata {
 
     public RomanNumberKata() {
         
-        map = new TreeMap<>();
+        map = new TreeMap<>(Collections.reverseOrder());
 
         map.put(1, "I");
         map.put(10, "X");
@@ -36,7 +37,7 @@ public class RomanNumberKata {
         for (Integer key : map.keySet()) {
             while (num >= key) {
                 num -= key;
-                result.append(map.keySet());
+                result.append(map.get(key));
             }
 
         }
