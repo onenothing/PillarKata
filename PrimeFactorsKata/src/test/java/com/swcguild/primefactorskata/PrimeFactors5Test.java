@@ -17,13 +17,15 @@ public class PrimeFactors5Test {
         prime = new PrimeFactors5();
     }
     
+    
+    private List<Integer> list() {
+        return new ArrayList<>();
+    }
+    
     @Test
     public void one() {
         assertEquals(list(), prime.generate(1));
     }
     
-    private List<Integer> list() {
-        return new ArrayList<>();
-    }
     
 }
