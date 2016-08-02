@@ -13,21 +13,35 @@ import java.util.TreeMap;
  * @author freebagelbob
  */
 public class RomanNumberKata {
-    
+
     private Map<Integer, String> map;
 
-    public String convert(int num) {
+    public RomanNumberKata() {
         
         map = new TreeMap<>();
-        
+
         map.put(1, "I");
         map.put(10, "X");
         map.put(50, "L");
         map.put(100, "C");
         map.put(500, "D");
         map.put(1000, "M");
+
+    }
+
+    public String convert(int num) {
         
-        return map.get(num);
+        StringBuilder result = new StringBuilder();
+
+        for (Integer key : map.keySet()) {
+            while (num >= key) {
+                num -= key;
+                result.append(map.keySet());
+            }
+
+        }
+
+        return result.toString();
 
     }
 
