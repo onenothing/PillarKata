@@ -48,10 +48,20 @@ public class RomanNumberKataTest {
     }
 
     @Test
-    @SuppressWarnings("empty-statement")
     public void whenPassedAZeroAnExceptionIsThrown() {
         try {
             roman.convert(0);
+            fail("Argument out of range exception is not handled.");
+        } catch (IllegalArgumentException e) {
+
+        }
+
+    }
+    
+    @Test
+    public void whenPassedANumberGreaterThan3999AnExceptionIsThrown() {
+        try {
+            roman.convert(4000);
             fail("Argument out of range exception is not handled.");
         } catch (IllegalArgumentException e) {
 
