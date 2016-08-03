@@ -42,6 +42,16 @@ public class PrimeFactors5Test {
     public void four() {
         assertEquals(list(2,2), prime.generate(4));
     }
+  
+    @Test
+    public void six() {
+        assertEquals(list(2,3), prime.generate(6));
+    }
+    
+    @Test
+    public void eight() {
+        assertEquals(list(2,2,2), prime.generate(8));
+    }
     
     
 }
