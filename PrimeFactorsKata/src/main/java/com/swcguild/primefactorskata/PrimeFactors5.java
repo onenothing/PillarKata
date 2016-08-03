@@ -11,7 +11,7 @@ public class PrimeFactors5 {
         List<Integer> primes = new ArrayList<>();
         
         if (num > 1) {
-            primes.add(2);
+            primes.add(num);
         }
         
         return primes;
