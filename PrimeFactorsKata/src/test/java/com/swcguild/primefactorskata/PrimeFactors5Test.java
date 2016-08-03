@@ -2,6 +2,7 @@
 package com.swcguild.primefactorskata;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,13 +19,18 @@ public class PrimeFactors5Test {
     }
     
     
-    private List<Integer> list() {
-        return new ArrayList<>();
+    private List<Integer> list(Integer... ints) {
+        return new ArrayList<>(Arrays.asList(ints));
     }
     
     @Test
     public void one() {
         assertEquals(list(), prime.generate(1));
+    }
+    
+    @Test
+    public void two() {
+        assertEquals(list(2), prime.generate(2));
     }
     
     
