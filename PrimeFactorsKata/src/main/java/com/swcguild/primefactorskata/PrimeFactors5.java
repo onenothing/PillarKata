@@ -7,7 +7,14 @@ import java.util.List;
 public class PrimeFactors5 {
 
     public static List<Integer> generate(int num) {
-        return new ArrayList<>();
+        
+        List<Integer> primes = new ArrayList<>();
+        
+        if (num > 1) {
+            primes.add(2);
+        }
+        
+        return primes;
     }
     
 }
