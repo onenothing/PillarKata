@@ -58,5 +58,10 @@ public class PrimeFactors5Test {
         assertEquals(list(3,3), prime.generate(9));
     }
     
+    @Test
+    public void oneTwentyFive() {
+        assertEquals(list(5,5,5), prime.generate(125));
+    }
+    
     
 }
