@@ -10,16 +10,17 @@ public class PrimeFactors5 {
         List<Integer> primes = new ArrayList<>();
          
         int digit = 2;
-        if (num > 1) {
+        while (num > 1) {
             while (num % digit == 0) {
                 primes.add(digit);
                 num /= digit;
             }
-
+            digit++;
+        }
             if (num > 1) {
                 primes.add(num);
             }
-        }
+        
         return primes;
     }
 
